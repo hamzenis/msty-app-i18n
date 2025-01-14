@@ -4,35 +4,59 @@
   "path": "경로",
   "discardChanges": "변경 사항 취소",
   "checkForUpdates": "업데이트 확인",
-  "uninstall": "{item} 제거",
   "invalidJSON": "유효하지 않은 JSON",
-  "reset": "{item} 초기화",
-  "save": "{item} 저장",
   "eg": "예: {item}",
   "advancedConfiguration": "고급 설정",
   "appData": "앱 데이터",
   "appLogs": "앱 로그",
   "localAIServiceLogs": "로컬 AI 서비스 로그",
-  "mac": {
-    "locateInFolder": "Finder에서 열기"
-  },
-  "windows": {
-    "locateInFolder": "파일 탐색기에서 보기"
-  },
-  "linux": {
-    "locateInFolder": "파일 관리자로 찾기"
-  },
+  "cancel": "취소",
+  "confirm": "확인",
+  "new": "새 {item}",
+  "edit": "{item} 편집",
+  "select": "{item} 선택",
+  "fetch": "{item} 가져오기",
+  "refetch": "{item} 다시 가져오기",
+  "filter": "{item} 필터",
+  "search": "{item} 검색",
+  "provider": "공급자",
+  "learnMore": "자세히 알아보기.",
+  "name": "이름",
+  "model": "모델 | 모델들",
+  "modelId": "모델 ID",
+  "toggle": "{item} 전환",
+  "loading": "{item} 로드 중...",
+  "license": "라이선스",
+  "apiVersion": "API 버전",
   "settings": {
     "label": "설정",
+    "description": "Msty의 설정을 편집",
     "general": {
       "label": "일반",
+      "language": {
+        "label": "언어",
+        "description": "Msty에서 사용할 언어를 선택하세요. 원하는 언어가 없으면 i18n 깃허브 저장소를 통해 번역에 기여할 수 있습니다."
+      },
       "autoGenerateChatTitle": {
         "label": "채팅 제목 자동 생성",
-        "description": "이 기능을 활성화하면 새 채팅 제목이 자동으로 생성됩니다. 온라인 모델을 사용하는 채팅의 경우 사용된 모델과 처음 두 메시지를 기반으로 제목이 생성됩니다. 로컬 모델을 사용하는 경우 제목 생성이 항상 활성화되며 토큰 사용량이 증가할 수 있습니다."
+        "description": "이 기능을 활성화하면 새로운 채팅 제목이 자동으로 생성됩니다. 온라인 모델을 사용하는 경우, 모델과 처음 두 메시지를 기반으로 제목이 생성됩니다. 로컬 모델을 사용하는 경우 제목 생성이 항상 활성화되며 토큰 사용량이 증가할 수 있습니다."
       },
       "enableLinksInChatMessages": {
         "label": "채팅 메시지에서 링크 활성화",
-        "description": "채팅 메시지에서 링크를 활성화하거나 비활성화합니다. 비활성화하면 링크를 클릭할 수 없게 됩니다. 보안상의 이유로 이 기능을 비활성화하는 것을 권장합니다."
+        "description": "채팅 메시지에서 링크를 활성화하거나 비활성화합니다. 비활성화하면 링크를 클릭할 수 없습니다. 보안상의 이유로 이 기능을 비활성화하는 것을 권장합니다."
+      },
+      "networkProxyConfiguration": {
+        "label": "네트워크 프록시 설정",
+        "proxyAddress": {
+          "label": "프록시 주소",
+          "description": "네트워크 트래픽을 라우팅할 프록시 주소를 지정하십시오. 주소가 제공되지 않으면 Msty가 장치의 네트워크 프록시 주소를 자동으로 감지합니다. 설정이 재설정되면 Msty를 종료하고 다시 시작해야 합니다."
+        },
+        "reset": {
+          "success": "프록시 설정이 재설정되었습니다."
+        },
+        "save": {
+          "success": "프록시가 구성되었습니다."
+        }
       },
       "theme": {
         "label": "테마",
@@ -43,7 +67,7 @@
           "system": "시스템"
         },
         "accentColor": {
-          "label": "포인트 컬러"
+          "label": "강조 색상"
         },
         "fontStyle": {
           "label": "글꼴 스타일"
@@ -53,29 +77,29 @@
         },
         "fontSize": "글꼴 크기",
         "themeTray": "테마 트레이",
-        "toggleThemeTray": "테마 트레이 토글"
+        "toggleThemeTray": "테마 트레이 전환"
       },
       "applicationInfo": {
         "label": "애플리케이션 정보",
         "appVersion": {
           "label": "앱 버전",
           "description": {
-            "manual": "최신 업데이트를 정기적으로 확인하며 새 업데이트가 있을 경우 알림을 받습니다. 수동으로 업데이트를 확인할 수도 있습니다.",
-            "automatic": "최신 업데이트가 정기적으로 확인되고 자동으로 설치됩니다. 수동으로 업데이트를 확인할 수도 있습니다."
+            "manual": "최신 업데이트를 주기적으로 확인하며, 새 업데이트가 있으면 알림을 받습니다. 수동으로 업데이트를 확인할 수도 있습니다.",
+            "automatic": "최신 업데이트를 주기적으로 확인하고 자동으로 설치합니다. 수동으로 업데이트를 확인할 수도 있습니다."
           },
           "viewChangelog": "변경 로그 보기",
           "enableAutoUpdates": "자동 업데이트 활성화"
         },
         "modelsInfo": {
           "label": "모델 정보",
-          "description": "로컬 모델 메타데이터를 업데이트합니다. 이 정보에는 각 모델에 대한 세부 사항이 포함되지만 모델 파일 자체는 포함되지 않습니다. 이는 로컬 저장 모델과 온라인 모델 모두에 적용됩니다.",
+          "description": "로컬 모델 메타데이터를 업데이트합니다. 이 정보는 각 모델의 세부 정보를 포함하며, 로컬 저장 모델과 온라인 모델 모두에 적용됩니다.",
           "fetchLatestModelsInfo": {
             "label": "최신 모델 정보 가져오기"
           }
         },
         "appSettings": {
           "label": "앱 설정",
-          "description": "앱 설정을 기본값으로 재설정하면 잠재적인 문제를 해결할 수 있습니다. 이 작업은 사용자 기본 설정(예: 외형 및 모델 경로)을 복원하지만 채팅이나 다운로드/가져온 모델 등의 데이터는 삭제되지 않습니다.",
+          "description": "앱 설정을 기본값으로 복원하면 잠재적인 문제를 해결할 수 있습니다. 이는 외형, 모델 경로와 같은 기본 사용자 설정을 복원하지만, 채팅이나 다운로드/가져온 모델 등 데이터는 삭제되지 않습니다.",
           "resetAppSettings": {
             "label": "앱 설정 초기화",
             "success": "앱 설정이 초기화되었습니다."
@@ -83,27 +107,26 @@
         },
         "dataPaths": {
           "label": "데이터 경로",
-          "description": "모든 데이터(모델, 대화, 설정 및 로그 포함)는 사용자의 장치에 로컬로 저장됩니다. 애플리케이션 파일 구조에 익숙한 경우에만 이러한 디렉토리 내용을 수정하십시오.",
+          "description": "모델, 대화, 설정, 로그를 포함한 모든 데이터는 사용자의 장치에 로컬로 저장됩니다. 애플리케이션의 파일 구조에 익숙한 경우에만 이러한 디렉터리 내용을 수정하십시오.",
           "activeWorkspace": "활성 작업 공간"
         },
         "helpAndDiscussions": {
           "label": "도움말 및 토론",
-          "description": "피드백을 공유하며 최신 정보를 얻기 위해 Discord 커뮤니티에 참여하세요.",
-          "sayHi": "대화 시작",
+          "description": "Discord 커뮤니티에 참여하여 지원을 받고, 피드백을 공유하며 최신 정보를 확인하세요.",
+          "sayHi": "안녕하세요!",
           "viewDocs": "문서 보기"
         }
       }
     },
     "localAI": {
-      "label": "로컬 AI 설정",
       "manageLocalAIModels": "로컬 AI 모델 관리",
       "localAIService": {
         "label": "로컬 AI 서비스",
-        "saveAndRestartService": "저장 및 서비스 재시작",
+        "saveAndRestartService": "저장하고 서비스 재시작",
         "restartingService": "로컬 AI 서비스 재시작 중",
         "modelsDirectory": {
-          "label": "모델 디렉토리",
-          "description": "로컬 LLM을 저장하는 디렉토리입니다.",
+          "label": "모델 디렉터리",
+          "description": "로컬 LLM을 저장하는 디렉터리입니다.",
           "editModelsPath": {
             "label": "모델 경로 수정",
             "description": "모델을 다운로드할 원하는 위치를 설정하십시오.",
@@ -139,7 +162,7 @@
           "editPortNumber": {
             "label": "포트 번호 수정",
             "success": "로컬 AI 서비스 포트 번호가 저장되었습니다.",
-            "failure": "로컬 AI 서비스 포트 번호를 저장할 수 없습니다."
+            "failure": "로컬 AI 서비스 포트 번호를 저장하지 못했습니다."
           }
         },
         "serviceVersion": {
@@ -168,11 +191,11 @@
         },
         "maximumParallelChats": {
           "label": "최대 동시 채팅 수",
-          "description": "동시 채팅 세션의 최대 수입니다(스플릿 모드 사용 시)."
+          "description": "동시에 실행 가능한 채팅 세션의 최대 수입니다(스플릿 모드 사용 시)."
         },
         "maximumLoadedModels": {
           "label": "최대 로드된 모델 수",
-          "description": "동시에 메모리에 로드되는 LLM의 최대 수입니다. 더 많은 LLM을 메모리에 준비해두면 초기 응답 속도가 빨라지지만 시스템 리소스를 추가로 소비합니다."
+          "description": "동시에 메모리에 로드되는 LLM의 최대 수입니다. 더 많은 모델을 메모리에 준비하면 초기 응답 속도가 빨라지지만 시스템 리소스를 추가로 소모합니다."
         },
         "enableNetworkAccess": {
           "label": "네트워크 액세스 활성화",
@@ -180,21 +203,21 @@
         },
         "allowedNetworkOrigins": {
           "label": "허용된 네트워크 원본",
-          "description": "허용된 네트워크 원본을 여기에 나열하십시오(쉼표로 구분). 각 항목은 http:// 또는 https://로 시작해야 합니다. 모든 원본을 허용하려면 *을 사용하십시오."
+          "description": "허용된 네트워크 원본을 쉼표로 구분하여 나열하세요. 각 항목은 http:// 또는 https://로 시작해야 합니다. 모든 원본을 허용하려면 *을 사용하십시오."
         },
         "captureServiceLogs": {
           "label": "서비스 로그 캡처",
-          "description": "디버깅 목적으로 서비스 로그를 캡처합니다. 필요한 경우에만 이 기능을 활성화하는 것을 권장합니다."
+          "description": "디버깅 목적으로 서비스 로그를 캡처합니다. 필요한 경우에만 이 기능을 활성화하는 것이 좋습니다."
         },
         "advancedConfiguration": {
-          "description": "로컬 AI 서비스에 환경 변수를 설정하려면 유효한 JSON을 입력하십시오."
+          "description": "로컬 AI 서비스에 환경 변수를 설정하려면 유효한 JSON을 입력하세요."
         },
         "save": {
           "success": "서비스 설정이 저장되었습니다.",
           "failure": "서비스 설정을 저장하지 못했습니다."
         },
         "reset": {
-          "success": "서비스 설정이 원래 값으로 재설정되었습니다.",
+          "success": "서비스 설정이 기본값으로 재설정되었습니다.",
           "failure": "서비스 설정을 재설정하지 못했습니다."
         }
       },
@@ -206,17 +229,502 @@
           "description": "사용 후 모델을 메모리에 유지하는 시간(분 단위)입니다."
         },
         "advancedConfiguration": {
-          "description": "채팅 세션 중 모델에 추가 매개변수를 전달하려면 유효한 JSON을 입력하십시오."
+          "description": "채팅 세션 중 모델에 추가 매개변수를 전달하려면 유효한 JSON을 입력하세요."
         },
         "save": {
-          "success": "설정이 저장되었으며 채팅 중에 적용됩니다.",
-          "failure": "모델 설정을 저장하지 못했습니다."
+          "success": "구성이 저장되었으며 채팅 중에 적용됩니다.",
+          "failure": "모델 구성을 저장하지 못했습니다."
         },
         "reset": {
-          "success": "채팅 모델 설정이 원래 값으로 재설정되었습니다.",
+          "success": "채팅 모델 설정이 기본값으로 재설정되었습니다.",
           "failure": "채팅 모델 설정을 재설정하지 못했습니다."
         }
       }
+    },
+    "remoteModelProviders": {
+      "noModels": {
+        "label": "추가된 AI 모델 제공자가 없습니다.",
+        "description": "Open AI, Mistral, Google Gemini, Perplexity, Open AI 호환 엔드포인트, Remote Ollama, Remote Msty 등을 추가하여 시작하세요."
+      },
+      "selectModels": "모델 선택",
+      "filterAvailableModels": "모델 검색",
+      "description": {
+        "whereToGetKey": "API 제공자의 웹사이트에서 키를 얻을 수 있습니다.",
+        "whereItsStored": "기본적으로 API 키는 운영 체제의 키체인에 안전하게 로컬로 저장됩니다. 저장하거나 검색할 때 자격 증명이 요청될 수 있습니다.",
+        "linuxKeyringConfiguration": "Linux에서 키체인이 잘못 구성된 경우 API 키를 저장할 수 없을 수도 있습니다. 키체인이 제대로 구성되었는지 확인하세요. 키체인을 사용하지 않고 앱 데이터베이스에 저장할 수도 있지만, 이는 보안이 낮습니다.",
+        "keyHintInfo": "{keyHint}는 힌트일 뿐입니다. 실제 키는 운영 체제의 키체인에 안전하게 저장되며, 키체인을 사용하지 않도록 선택하지 않는 한 사용됩니다. 키를 업데이트하려면 새 키를 제공하고 '업데이트' 버튼을 클릭하세요.",
+        "ifOllamaOrMstyRemote": "모델을 자동으로 가져오려면 API 키를 다시 제공해야 합니다."
+      },
+      "addItem": {
+        "success": "모델 제공자 {providerName}이(가) 추가되었습니다."
+      },
+      "updateItem": {
+        "success": "모델 제공자 {providerName}이(가) 업데이트되었습니다."
+      },
+      "deleteItem": {
+        "label": "모델 제공자 {providerName}을(를) 삭제하시겠습니까?",
+        "description": "이 작업은 모델 제공자 키와 관련된 모델만 삭제합니다. 이전에 모델과의 채팅 기록은 삭제되지 않습니다.",
+        "success": "모델 제공자 {providerName}이(가) 삭제되었습니다."
+      },
+      "namePlaceholder": "예: 나의 {providerName} 모델",
+      "saveInKeychain": "키체인에 키 안전하게 저장",
+      "apiEndpoint": "API 엔드포인트",
+      "serviceEndpoint": "서비스 엔드포인트",
+      "fetchModels": {
+        "label": "모델 가져오기",
+        "refetchModels": "모델 다시 가져오기",
+        "description": "유효한 엔드포인트를 제공하고 '모델 가져오기'를 눌러 사용 가능한 모델을 검색하세요.",
+        "noModelsAvailable": "사용 가능한 모델이 없습니다.",
+        "error": "사용 가능한 모델을 가져올 수 없습니다. 서비스 엔드포인트가 올바른지 확인하세요.",
+        "info": "{endpoint}에서 사용 가능한 모델을 가져오는 중입니다."
+      },
+      "openAICompatibleUrlInfo": "http:// 또는 https://를 반드시 포함하세요.",
+      "customModels": {
+        "label": "사용자 정의 모델"
+      },
+      "targetURI": "대상 URI",
+      "uriOptions": "URI 옵션",
+      "instanceName": "인스턴스 이름",
+      "deploymentName": "배포 이름"
+    },
+    "defaultPrompts": {
+      "label": "기본 프롬프트",
+      "placeholder": "프롬프트 유형 선택...",
+      "defaultModelPrompt": {
+        "label": "기본 모델 프롬프트",
+        "placeholder": "전역 기본 모델 프롬프트를 설정하려면 클릭하세요..."
+      },
+      "autoTitleGenerationPrompt": {
+        "label": "자동 제목 생성 프롬프트",
+        "placeholder": "제목 생성..."
+      },
+      "realTimeDataSearchQueryPrompt": {
+        "label": "실시간 데이터 검색 쿼리 합성 프롬프트",
+        "placeholder": "실시간 데이터 검색 쿼리 합성..."
+      },
+      "updatePrompt": {
+        "success": "{promptType}이(가) 업데이트되었습니다."
+      }
+    },
+    "licenseAndAccess": {
+      "label": "라이선스 및 접근",
+      "enterLicenseKey": "라이선스 키를 입력하세요",
+      "aurum": {
+        "label": "Aurum 라이선스",
+        "description": "Aurum 라이선스를 활성화하여 Msty의 모든 프리미엄 기능을 써보세요.",
+        "purchaseLicense": "라이선스 구매",
+        "activate": {
+          "label": "Aurum 라이선스 활성화",
+          "success": "Aurum 라이선스가 활성화되었습니다.",
+          "failure": "Aurum 라이선스를 활성화할 수 없습니다. 다시 시도해 주세요. {errorMessage}"
+        },
+        "activated": {
+          "description": "Msty를 지원해 주셔서 감사합니다! Aurum 라이선스가 활성화되었으며 Msty의 모든 프리미엄 기능을 사용가능합니다."
+        }
+      },
+      "aurumLifetime": {
+        "label": "Aurum 평생이용권",
+        "description": "Aurum Lifetime Access를 한 번만 구매하여 Msty의 모든 프리미엄 기능을 영구적으로사용하고 서포터의 골든서클에 조인하세요.",
+        "notASubscription": "참고사항: 단 한번의 1회성 구매이며 연마다 갱신해야하는 구독이 아닙니다. Aurum 라이선스에서 Aurum 평생이용권으로 업그레이드는 불가능합니다.",
+        "join": "평생이용권 구매하기",
+        "activate": {
+          "label": "Aurum 평생이용권 활성화",
+          "success": "감사합니다! 이제 Aurum 평생이용권 멤버가 되셨습니다!",
+          "failure": "Aurum 평생이용권을 활성화할 수 없습니다. 다시 시도해 주세요. {errorMessage}"
+        },
+        "activated": {
+          "label": "Aurum 평생 이용자",
+          "description": "Aurum 평생이용권 고객입니다! 구매해 주셔서 감사드리며 환영합니다!",
+          "additionalNote": "여러분의 서포트 덕분에 외부투자 없이 새로운 기능을 추가하고 앱을 개선하는 데 집중할 수 있었습니다."
+        }
+      }
     }
+  },
+  "searchModels": {
+    "label": "모델 검색...",
+    "noModelsFound": "모델을 찾을 수 없습니다."
+  },
+  "localAI": {
+    "label": "로컬 AI",
+    "browseModels": "온라인에서 모델 찾기",
+    "startService": {
+      "failure": "로컬 AI 서비스를 시작하지 못했습니다. 다시 시도해 주세요."
+    }
+  },
+  "ggufModel": {
+    "label": "GGUF 모델 | GGUF 모델",
+    "import": {
+      "confirmation": "GGUF 모델(들)을 어떤형태로 임포트 하고싶으신가요?",
+      "link": {
+        "description": "로컬 AI 모델 디렉토리에 GGUF 모델에 대한 심볼릭 링크를 생성하려면 {action}을 선택하세요. 적용시 디스크 공간을 절약할 수 있지만 원본 파일이 삭제되거나 이동되면 모델을 사용할 수 없게 됩니다."
+      },
+      "copy": {
+        "description": "로컬 AI 모델 디렉토리에 GGUF 모델의 사본을 생성하려면 {action}을 선택하세요. 적용시 추가적인 디스크 공간이 필요하지만 원본 파일이 삭제되더라도 모델은 삭제되지 않습니다."
+      }
+    }
+  },
+  "remoteModelProviders": {
+    "label": "원격 모델 제공자"
+  },
+  "vaporMode": {
+    "label": "베이퍼(Vapor) 모드",
+    "description": "대화 기록이 저장되지 않으며 기능을 끄면 기록이 사라집니다.",
+    "isEnabledDescription": "베이퍼(Vapor) 모드가 켜졌습니다."
+  },
+  "keyboardAndMouse": {
+    "keyPlusClick": "키 + 클릭",
+    "clickToEdit": "편집",
+    "chatSelection": {
+      "adjacent": "폴더에서 인접한 대화를 선택합니다.",
+      "nonAdjacent": "비인접한 대화를 선택합니다."
+    },
+    "skipConfirmationDialog": "여러 작업에 대한 확인 다이얼로그 건너뛰기",
+    "shortcuts": {
+      "usefulShortcuts": "유용한 단축키",
+      "copyLastAIMessage": "마지막 AI 메시지 복사",
+      "regenerateLastAIMessage": "마지막 AI 메시지 다시 생성",
+      "editLastUserMessage": "마지막 사용자 메시지 편집",
+      "editLastAIMessage": "마지막 AI 메시지 편집",
+      "navigateBetweenMessages": "메시지 간 이동"
+    },
+    "selection": "선택 | 선택항목",
+    "dropHere": "여기에 드롭하세요"
+  },
+  "aurumPerk": {
+    "label": "Aurum 라이센스 혜택",
+    "description": "Aurum 라이선스 보유자에게만 제공됩니다.",
+    "supportUs": "라이선스 구매를 통해 서포트해주세요."
+  },
+  "themeTray": "테마 트레이",
+  "chat": "챗 | 채팅들",
+  "title": "제목",
+  "contextShield": "컨텍스트 쉴드",
+  "regenerate": "{item} 재생성",
+  "collapse": "{item} 축소",
+  "expand": "{item} 확장",
+  "sidebar": "사이드바",
+  "folder": {
+    "label": "폴더 | 폴더들",
+    "deleteItem": {
+      "label": "{name} 폴더 삭제하기",
+      "confirmation": "{name} 폴더를 삭제하시겠습니까?"
+    }
+  },
+  "allFolders": "모든 폴더",
+  "allConversations": "모든 대화",
+  "bookmark": "북마크 | 북마크들",
+  "copyToClipboard": "{item}을 클립보드에 복사",
+  "fuzzySearch": "유사 검색",
+  "matchCase": "대소문자 구분",
+  "item": "아이템 | 아이템들",
+  "view": "{item} 보기",
+  "message": "메시지 | 메시지들",
+  "itemOptions": " {item} 옵션",
+  "itemName": "{item} 이름",
+  "modelInstructions": "모델 인스트럭션",
+  "applyToThisItem": "{item}에 적용",
+  "activateItem": {
+    "label": "{item} 활성화",
+    "success": "{item}이(가) 활성화되었습니다.",
+    "failure": "{item}을(를) 활성화할 수 없습니다."
+  },
+  "saveChanges": "변경사항 저장",
+  "saveItem": {
+    "label": "{item} 저장",
+    "as": "{item}을(를) 다른이름으로 저장",
+    "asDefaultFor": "{item}의 기본값으로 저장",
+    "success": "{item}이(가) 저장되었습니다.",
+    "failure": "{item}을(를) 저장할 수 없습니다"
+  },
+  "resetItem": {
+    "label": "{item} 초기화",
+    "success": "{item}이(가) 초기화되었습니다.",
+    "failure": "{item}을(를) 초기화 할 수 없습니다."
+  },
+  "uninstallItem": {
+    "label": "{item} 제거",
+    "confirmation": "{item}을 제거하시겠습니까?",
+    "success": "{item}이(가) 제거되었습니다",
+    "failure": "{item}을(를) 제거할 수 없습니다."
+  },
+  "addItem": {
+    "label": "{item} 추가",
+    "success": "{item}이(가) 추가되었습니다.",
+    "failure": "{item}을(를) 추가할 수 없습니다."
+  },
+  "moveItem": {
+    "label": "{item} 이동",
+    "success": "{item}이(가) 이동되었습니다",
+    "failure": "{item}을(를) 이동할 수 없습니다"
+  },
+  "bookmarkItem": {
+    "label": "{item} 북마크",
+    "success": "{item}이(가) 북마크되었습니다",
+    "failure": "{item}을(를) 북마크할 수 없습니다"
+  },
+  "removeItem": {
+    "label": "{item} 제거",
+    "success": "{item}이(가) 제거되었습니다",
+    "failure": "{item}을(를) 제거할 수 없습니다"
+  },
+  "removeItemFrom": {
+    "success": "{item}이(가) {source}에서 제거되었습니다",
+    "failure": "{item}을(를) {source}에서 제거할 수 없습니다"
+  },
+  "clearAndSave": "지우고 저장",
+  "clearItem": {
+    "label": "{item} 지우기"
+  },
+  "hideItem": {
+    "label": "{item} 숨기기"
+  },
+  "deleteItem": {
+    "label": "{item} 삭제",
+    "confirmation": "{item}을(를) 삭제하시겠습니까?",
+    "success": "{item}이(가) 삭제되었습니다",
+    "failure": "{item}을(를) 삭제할 수 없습니다"
+  },
+  "cloneItem": {
+    "label": "{item} 복제",
+    "success": "{item}이(가) 복제되었습니다",
+    "failure": "{item}을(를) 복제할 수 없습니다"
+  },
+  "createItem": {
+    "label": "{item} 생성",
+    "success": "{item}이(가) 생성되었습니다",
+    "failure": "{item}을(를) 생성할 수 없습니다"
+  },
+  "updateItem": {
+    "label": "{item} 업데이트",
+    "confirmation": "{item}을(를) 업데이트하시겠습니까?",
+    "success": "{item}이(가) 업데이트되었습니다",
+    "failure": "{item}을(를) 업데이트할 수 없습니다"
+  },
+  "mergeItem": {
+    "label": "{item} 병합",
+    "success": "{item}이(가) 병합되었습니다",
+    "failure": "{item}을(를) 병합할 수 없습니다"
+  },
+  "copyItem": {
+    "label": "{item} 복사",
+    "createNew": "새 복사본 생성",
+    "success": "{item}이(가) 복사되었습니다",
+    "failure": "{item}을(를) 복사할 수 없습니다"
+  },
+  "replaceItem": {
+    "label": "{item} 교체",
+    "success": "{item}이(가) 교체되었습니다",
+    "failure": "{item}을(를) 교체할 수 없습니다"
+  },
+  "linkItem": {
+    "label": "{item} 연결",
+    "success": "{item}이(가) 연결되었습니다",
+    "failure": "{item}을(를) 연결할 수 없습니다"
+  },
+  "generateItem": {
+    "label": "{item} 생성",
+    "success": "{item}이(가) 생성되었습니다",
+    "failure": "{item}을(를) 생성할 수 없습니다"
+  },
+  "importItem": {
+    "label": "{item} 가져오기",
+    "success": "{item}이(가) 가져와졌습니다",
+    "failure": "{item}을(를) 가져올 수 없습니다"
+  },
+  "bookmarkedMessagesAndChats": {
+    "label": "북마크된 메시지 및 대화",
+    "messages": {
+      "description": "북마크된 메시지가 여기에 표시됩니다. 채팅 메시지 옵션에서 북마크 아이콘을 클릭하여 시작하세요.",
+      "deletedMessageNavigationFailure": "메시지로 이동할 수 없습니다. 해당 메시지가 삭제되었습니다."
+    },
+    "chats": {
+      "description": "북마크된 대화가 여기에 표시됩니다. 분할 대화 옵션에서 대화 북마크 옵션을 클릭하여 시작하세요."
+    }
+  },
+  "splitChat": {
+    "label": "대화 분할 | 대화 분할들",
+    "single": "단일 대화 분할"
+  },
+  "splitPreset": {
+    "label": "분할 프리셋 | 분할 프리셋들",
+    "deleteItem": {
+      "label": "분할 프리셋 {item} 삭제?",
+      "description": "이 작업은 분할 프리셋 및 그 설정을 삭제합니다.",
+      "success": "분할 프리셋 {item}이 삭제되었습니다."
+    },
+    "saveLayoutAs": "분할 레이아웃을 다른 이름으로 저장"
+  },
+  "showAllItem": "모든 {item} 표시",
+  "dockItem": "{item} 고정",
+  "undockAllItem": "모든 {item} 고정 해제",
+  "switchToItem": {
+    "label": "{item}(으)로 전환"
+  },
+  "conversation": {
+    "label": "대화 | 대화들",
+    "title": {
+      "label": "대화 제목",
+      "edit": "대화 제목 편집"
+    },
+    "startChattingWithModel": "{modelName}과(와) 채팅 시작",
+    "noConversationsFound": "대화를 찾을 수 없습니다",
+    "noChatModelSelected": "선택된 채팅 모델이 없습니다",
+    "folder": {
+      "startNewConversation": "{folderName}에서 새 대화 시작",
+      "delete": {
+        "description": "관련된 대화와 채팅, 메시지도 삭제됩니다."
+      },
+      "deleteAllConversations": {
+        "description": "{folderName} 내의 모든 대화가 삭제됩니다."
+      }
+    },
+    "delete": {
+      "description": "관련된 채팅 메시지들도 삭제됩니다."
+    },
+    "merge": {
+      "description": "{itemCount}개의 대화를 여러 분할이 포함된 하나의 대화로 병합합니다."
+    },
+    "flattenItem": "{item} 평면화",
+    "cloneAndFlatten": "복제 및 평면화",
+    "inputBox": {
+      "placeholder": {
+        "focused": "여기에 메시지를 입력하세요",
+        "unfocused": "/를 눌러 포커스를 맞추고 입력을 시작하세요"
+      }
+    },
+    "shareWithSyncedSplits": "동기화된 분할과 공유",
+    "autoGenerateTitle": {
+      "label": "{model}을(를) 사용하여 제목 자동 생성",
+      "selectAModel": "모델을 선택하여 제목 자동 생성",
+      "selectDifferentModel": "{keyCombo} + 클릭하여 다른 모델 선택",
+      "failure": "대화 제목을 자동 생성할 수 없습니다"
+    },
+    "flowchat": {
+      "label": "플로우챗",
+      "description": "대화의 시각적 맵을 보려면 클릭하세요"
+    }
+  },
+  "setupItem": {
+    "label": "{item} 설정하기",
+    "success": "{item} 설정완료",
+    "failure": "{item} 설정실패"
+  },
+  "downloadItem": {
+    "label": "{item} 다운로드",
+    "success": "{item} 다운로드 완료",
+    "failure": "{item} 다운로드 실패"
+  },
+  "continue": "계속",
+  "onboarding": {
+    "title": "환영합니다!",
+    "subTitle": "어떤 AI 모델부터 시작해볼까요?",
+    "setupLocalAI": {
+      "pros": {
+        "item1": "메타의 Llama3, 마이크로소프트의 Phi3, IBM의 Granite, 구글의 Gemma 등 AI를 사용해보세요",
+        "item2": "인터넷없이 폐쇄망에서 AI 채팅이 가능합니다",
+        "item3": "AI 로컬 모델은 무료입니다",
+        "item4": "특화된 AI모델을 설치해보세요"
+      },
+      "cons": {
+        "item1": "추가 여유 공간 및 메모리가 필요합니다."
+      }
+    },
+    "addRemoteModelsProvider": {
+      "pros": {
+        "item1": "OpenAI GPT, Azure, Claude Sonnet, Google Gemini, Perplexity, Remote Ollama등 을 연결합니다.",
+        "item2": "빠르게 시작해볼 수 있습니다.",
+        "item3": "모델을 특별히 다운로드할 필요가 없습니다."
+      },
+      "cons": {
+        "item1": "인터넷 연결이 필수입니다.",
+        "item2": "모델 사용료를 제공기업에게 지불해야 할 수 있습니다."
+      }
+    },
+    "downloadModel": {
+      "description": "{modelName} 다운받기 로컬AI의 모델크기는 {modelSize} 입니다. 이를 통해 빠르게 써보실 수 있으며 언제든지 다양한 모델을 다운로드 받아 바꾸어 사용하실 수 있습니다."
+    },
+    "inProgress": {
+      "description": "인터넷 커넥션 속도에 따라 몇 분 정도 시간이 걸릴 수 있습니다. 10분에서 15분 이상 소요시 저희에게 직접 연락주세요."
+    },
+    "onboardWithOllama": {
+      "label": "Ollama가 있으신가요?",
+      "description": "{folderPath}로 부터 Ollama 모델을 활용하여 빠르게 시작해보세요"
+    },
+    "success": "그게 다야! 이제 채팅을 시작할 수 있습니다."
+  },
+  "locateInFolder": {
+    "mac": "Finder에서 열기",
+    "windows": "파일 탐색기에서 보기",
+    "linux": "파일 관리자에서 찾기"
+  },
+  "showItem": {
+    "label": "Show {item}"
+  },
+  "createOrImportItem": {
+    "label": "Create or Import {item}"
+  },
+  "apiKey": "API Key | API Keys",
+  "settingsAndConfigs": "Settings & Configs",
+  "selectItemLocation": "Select {item} location",
+  "icon": "Icon | Icons",
+  "defaultItem": "Default {item}",
+  "workspace": {
+    "label": "작업공간 | 작업공간들",
+    "defaultWorkspace": "기본 작업공간",
+    "removeWorkspace": {
+      "label": "작업공간 제거",
+      "confirmation": "작업공간 {name}을 제거하시겠습니까?"
+    },
+    "deleteFromDisk": {
+      "label": "작업공간 제거 및 디스크에서 삭제"
+    },
+    "createAndSwitch": {
+      "label": "Create and Swtich",
+      "title": "Stay Organized with Workspaces",
+      "description": "Keep Chats, Knowledge Stacks, Prompts, etc. organized separately by creating distinct workspaces in their own folders and shared across devices.",
+      "whatToCopy": "What to copy from the {workspaceName} workspace?",
+      "doNotCopyAnything": "Do not copy anything; start from scratch",
+      "apiKeysWarning": {
+        "description": "Copying your securely saved API keys from the {workspaceName} workspace without updating them first will not work if this workspace is imported on a different device.",
+        "updateAPIKeys": "Update API keys for the new workspace so I can use them across multiple-devices",
+        "doNotUpdateAPIKeys": "Do not update API keys for the new workspace. (I understand that any securely saved keys that get copied over will not work as expected if I import the workspace in a different device)"
+      }
+    },
+    "switch": {
+      "success": "Switched to {workspaceName} workspace",
+      "failure": "Could not switch to {workspaceName} workspace",
+      "directoryMissing": "Workspace directory {folderPath} is missing"
+    },
+    "remove": {
+      "confirmation": "Remove Workspace {workspaceName}?",
+      "description": "This will only remove the workspace and will NOT delete the saved data folder from disk.",
+      "withDataFolder": {
+        "label": "Also delete the data folder. This action cannot be undone.",
+        "description": "This will remove the workspace as well as delete the saved data folder from disk.",
+        "warning": "Workspace data folder at {folderPath} will be deleted"
+      }
+    }
+  },
+  "bookmarkedItem": "Bookmarked {item}",
+  "warning": "Warning",
+  "manageItem": "Manage {item}",
+  "itemInBeta": "{item} (Beta)",
+  "prompt": "Prompt | Prompts",
+  "quickPrompts": "Quick Prompts",
+  "modelSelector": "Model Selector",
+  "promptLibrary": {
+    "label": "Prompt Library"
+  },
+  "knowledgeStacks": {
+    "label": "Knowledge Stack | Knowledge Stacks"
+  },
+  "updateApp": {
+    "isAlreadyOnLatest": "You are already on the latest version",
+    "downloadingAndInstallingLatest": "Downloading and installing the latest version"
+  },
+  "modelsInfo": "Models Info",
+  "updateModelsInfo": {
+    "success": "Models Info updated to the latest version",
+    "failure": "Could not update Models Info to the latest verion"
   }
 }
